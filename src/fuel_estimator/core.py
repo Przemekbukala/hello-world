@@ -10,7 +10,7 @@ si = pint.UnitRegistry()
 @njit
 def _simulate_trip_engine(distance_km: int, base_fuel_per_km: float) -> float:
     """
-    Simulates fuel consumption on a kilometer-by-kilometer.s
+    Simulates fuel consumption on a kilometer-by-kilometer.
     Parameters:
         distance_km (int): The total trip distance in kilometers.
         base_fuel_per_km (float): The base fuel consumption in liters per 1 km.
