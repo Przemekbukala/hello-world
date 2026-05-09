@@ -20,3 +20,7 @@ test = ["pytest>=7.0","pytest-cov"]
 docs = ["pdoc>=14.0"]
 
 [tool.setuptools_scm]
+
+[project.urls]
+Homepage = "https://github.com/Przemekbukala/hello-world"
+Repository = "https://github.com/Przemekbukala/hello-world"
