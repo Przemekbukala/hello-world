@@ -36,6 +36,6 @@ def estimate_trip_fuel(distance, base_consumption_per_100km):
     if not distance.check('[length]'):
         raise pint.DimensionalityError(distance.units, 'meter')
     dist_km = int(distance.m_as('kilometer'))
-    liters_per_km = base_consumption_per_100km.m_as('liter / (100 * kilometer)') / 100.0
+    liters_per_km = base_consumption_per_100km.m_as('liter / kilometer')
     total_liters = _simulate_trip_engine(dist_km, liters_per_km)
     return total_liters * si.liter
