@@ -1,0 +1,17 @@
+name: pdoc
+on:
+  push:
+    branches: [ main ]
+permissions:
+  contents: write
+jobs:
+  pdoc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install .[docs]
+      - run: pdoc -o html fuel_estimator
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: html
